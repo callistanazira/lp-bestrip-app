@@ -1,0 +1,14 @@
+{
+  "name": "bestrip-app",
+  "version": "1.0.0",
+  "description": "Landing page for bestrip web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bestrip"
+  ],
+  "author": "powerpuff",
+  "license": "ISC"
+}
