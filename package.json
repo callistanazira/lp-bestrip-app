@@ -10,5 +10,8 @@
     "bestrip"
   ],
   "author": "powerpuff",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  }
 }
