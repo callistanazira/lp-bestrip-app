@@ -1,11 +1,463 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="./output.css" rel="stylesheet" />
-    </head>
-    <body>
-        <h1 class="text-3xl font-bold underline bg-blue-500">Hello world!</h1>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between bg-white p-6 space-y-6 md:space-y-0">
+        <!-- Harga Terjangkau -->
+        <div class="flex items-center space-x-4">
+          <img src="img/" alt="Icon Harga Terjangkau" class="w-16 h-16" />
+          <div>
+            <h3 class="font-bold text-lg">Harga Terjangkau</h3>
+            <p class="text-gray-500 text-sm">Memberikan harga terbaik dan murah</p>
+          </div>
+        </div>
+
+        <!-- Travel Terpercaya -->
+        <div class="flex items-center space-x-4">
+          <img src="img/" alt="Icon Travel Terpercaya" class="w-16 h-16" />
+          <div>
+            <h3 class="font-bold text-lg">Travel Terpercaya</h3>
+            <p class="text-gray-500 text-sm">Telah melayani 10.000 orang</p>
+          </div>
+        </div>
+
+        <!-- Aman & Nyaman -->
+        <div class="flex items-center space-x-4">
+          <img src="img/" alt="Icon Aman dan Nyaman" class="w-16 h-16" />
+          <div>
+            <h3 class="font-bold text-lg">Aman & Nyaman</h3>
+            <p class="text-gray-500 text-sm">Memberikan keamanan dalam perjalanan anda</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8">
+      <div class="text-center container mx-auto">
+        <h2 class="text-3xl font-bold mb-8">PAKET YANG TERSEDIA</h2>
+
+        <div class="overflow-x-auto px-4">
+          <div class="flex space-x-4 whitespace-nowrap">
+            <!-- Card 1 -->
+            <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+              <div class="flex justify-between items-center mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Umrah</h3>
+                  <p class="text-sm mb-2">tgl / bln / tahun</p>
+                  <div class="flex justify-center space-x-2 mb-2">
+                    <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                    <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                  </div>
+                </div>
+                <img src="img/" alt="Image description" class="w-36 h-24 ml-4" />
+              </div>
+              <hr />
+              <p class="flex space-x-2 text-sm mt-3 mb-3">
+                <span>Makassar</span>
+                <img src="img/" alt="Plane icon" class="w-4 h-4" />
+                <span>Jeddah</span>
+              </p>
+              <hr />
+              <div class="flex gap-4 mt-3 mb-3">
+                <div class="text-left">
+                  <p class="font-semibold">Include :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Bus</li>
+                    <li>Makan</li>
+                    <li>Hotel</li>
+                    <li>Koper</li>
+                    <li>Visa</li>
+                    <li>Tour Guide</li>
+                  </ul>
+                </div>
+                <div class="text-left">
+                  <p class="font-semibold">Exclude :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Tiket domestik</li>
+                    <li>Bagasi berlebih (overload)</li>
+                  </ul>
+                </div>
+              </div>
+              <hr />
+              <div class="mt-3 mb-3 text-left">
+                <p class="text-sm text-gray-600">MEKKAH</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="/img" alt="Star icon" class="w-4 h-4" />
+                  <img src="/img" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+                <p class="text-sm text-gray-600">MEDINA</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+              </div>
+              <hr />
+              <div class="flex justify-between items-center mt-4">
+                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                <div class="text-right">
+                  <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                  <p class="text-xl font-bold">18 Juta</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+              <div class="flex justify-between items-center mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Umrah</h3>
+                  <p class="text-sm mb-2">tgl / bln / tahun</p>
+                  <div class="flex justify-center space-x-2 mb-2">
+                    <span class="rounded-full border border-sky-100 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                    <span class="rounded-full border border-sky-100 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                  </div>
+                </div>
+                <img src="img/" alt="Image description" class="w-36 h-24 ml-4" />
+              </div>
+              <hr />
+              <p class="flex space-x-2 text-sm mt-3 mb-3">
+                <span>Makassar</span>
+                <img src="img/" alt="Plane icon" class="w-4 h-4" />
+                <span>Jeddah</span>
+              </p>
+              <hr />
+              <div class="flex gap-4 mt-3 mb-3">
+                <div class="text-left">
+                  <p class="font-semibold">Include :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Bus</li>
+                    <li>Makan</li>
+                    <li>Hotel</li>
+                    <li>Koper</li>
+                    <li>Visa</li>
+                    <li>Tour Guide</li>
+                  </ul>
+                </div>
+                <div class="text-left">
+                  <p class="font-semibold">Exclude :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Tiket domestik</li>
+                    <li>Bagasi berlebih (overload)</li>
+                  </ul>
+                </div>
+              </div>
+              <hr />
+              <div class="mt-3 mb-3 text-left">
+                <p class="text-sm text-gray-600">MEKKAH</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+                <p class="text-sm text-gray-600">MEDINA</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+              </div>
+              <hr />
+              <div class="flex justify-between items-center mt-4">
+                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                <div class="text-right">
+                  <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                  <p class="text-xl font-bold">18 Juta</p>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+              <div class="flex justify-between items-center mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Umrah</h3>
+                  <p class="text-sm mb-2">tgl / bln / tahun</p>
+                  <div class="flex justify-center space-x-2 mb-2">
+                    <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                    <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                  </div>
+                </div>
+                <img src="img/" alt="Image description" class="w-36 h-24 ml-4" />
+              </div>
+              <hr />
+              <p class="flex space-x-2 text-sm mt-3 mb-3">
+                <span>Makassar</span>
+                <img src="img/" alt="Plane icon" class="w-4 h-4" />
+                <span>Jeddah</span>
+              </p>
+              <hr />
+              <div class="flex gap-4 mt-3 mb-3">
+                <div class="text-left">
+                  <p class="font-semibold">Include :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Bus</li>
+                    <li>Makan</li>
+                    <li>Hotel</li>
+                    <li>Koper</li>
+                    <li>Visa</li>
+                    <li>Tour Guide</li>
+                  </ul>
+                </div>
+                <div class="text-left">
+                  <p class="font-semibold">Exclude :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Tiket domestik</li>
+                    <li>Bagasi berlebih (overload)</li>
+                  </ul>
+                </div>
+              </div>
+              <hr />
+              <div class="mt-3 mb-3 text-left">
+                <p class="text-sm text-gray-600">MEKKAH</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+                <p class="text-sm text-gray-600">MEDINA</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+              </div>
+              <hr />
+              <div class="flex justify-between items-center mt-4">
+                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                <div class="text-right">
+                  <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                  <p class="text-xl font-bold">18 Juta</p>
+                </div>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+              <div class="flex justify-between items-center mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Umrah</h3>
+                  <p class="text-sm mb-2">tgl / bln / tahun</p>
+                  <div class="flex justify-center space-x-2 mb-2">
+                    <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                    <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                  </div>
+                </div>
+                <img src="img/" alt="Image description" class="w-36 h-24 ml-4" />
+              </div>
+              <hr />
+              <p class="flex space-x-2 text-sm mt-3 mb-3">
+                <span>Makassar</span>
+                <img src="img/" alt="Plane icon" class="w-4 h-4" />
+                <span>Jeddah</span>
+              </p>
+              <hr />
+              <div class="flex gap-4 mt-3 mb-3">
+                <div class="text-left">
+                  <p class="font-semibold">Include :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Bus</li>
+                    <li>Makan</li>
+                    <li>Hotel</li>
+                    <li>Koper</li>
+                    <li>Visa</li>
+                    <li>Tour Guide</li>
+                  </ul>
+                </div>
+                <div class="text-left">
+                  <p class="font-semibold">Exclude :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Tiket domestik</li>
+                    <li>Bagasi berlebih (overload)</li>
+                  </ul>
+                </div>
+              </div>
+              <hr />
+              <div class="mt-3 mb-3 text-left">
+                <p class="text-sm text-gray-600">MEKKAH</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+                <p class="text-sm text-gray-600">MEDINA</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+              </div>
+              <hr />
+              <div class="flex justify-between items-center mt-4">
+                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                <div class="text-right">
+                  <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                  <p class="text-xl font-bold">18 Juta</p>
+                </div>
+              </div>
+            </div>
+            <!-- card 5 -->
+            <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+              <div class="flex justify-between items-center mb-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Umrah</h3>
+                  <p class="text-sm mb-2">tgl / bln / tahun</p>
+                  <div class="flex justify-center space-x-2 mb-2">
+                    <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                    <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                  </div>
+                </div>
+                <img src="img/" alt="Image description" class="w-36 h-24 ml-4" />
+              </div>
+              <hr />
+              <p class="flex space-x-2 text-sm mt-3 mb-3">
+                <span>Makassar</span>
+                <img src="img/" alt="Plane icon" class="w-4 h-4" />
+                <span>Jeddah</span>
+              </p>
+              <hr />
+              <div class="flex gap-4 mt-3 mb-3">
+                <div class="text-left">
+                  <p class="font-semibold">Include :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Bus</li>
+                    <li>Makan</li>
+                    <li>Hotel</li>
+                    <li>Koper</li>
+                    <li>Visa</li>
+                    <li>Tour Guide</li>
+                  </ul>
+                </div>
+                <div class="text-left">
+                  <p class="font-semibold">Exclude :</p>
+                  <ul class="list-disc list-inside text-sm">
+                    <li>Tiket domestik</li>
+                    <li>Bagasi berlebih (overload)</li>
+                  </ul>
+                </div>
+              </div>
+              <hr />
+              <div class="mt-3 mb-3 text-left">
+                <p class="text-sm text-gray-600">MEKKAH</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+                <p class="text-sm text-gray-600">MEDINA</p>
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="text-sm">Hotel</span>
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                  <img src="img/" alt="Star icon" class="w-4 h-4" />
+                </div>
+              </div>
+              <hr />
+              <div class="flex justify-between items-center mt-4">
+                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                <div class="text-right">
+                  <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                  <p class="text-xl font-bold">18 Juta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white text-gray-900 py-8">
+      <div class="container mx-auto flex flex-col md:flex-row justify-around items-start">
+        <!-- Contact Information -->
+        <div class="mb-6 md:w-1/3">
+          <div class="flex items-center mb-2">
+            <img src="img/" alt="BestTrip Logo" class="w-16 mr-2" />
+            <h4 class="text-lg font-semibold text-black">BEST trip travel</h4>
+          </div>
+          <div class="text-sm">
+            <div class="flex items-center mb-2">
+              <img src="img/" alt="Address icon" class="w-5 h-5 mr-5" />
+              <p>Jl. Boulevard Ruko Ruby No.26, Masale, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231</p>
+            </div>
+            <div class="flex items-center mb-2">
+              <img src="img/" alt="Email icon" class="w-5 h-5 mr-5" />
+              <p>bestTrip@gmail.com</p>
+            </div>
+            <div class="flex items-center">
+              <img src="img/" alt="Phone icon" class="w-5 h-4 mr-5" />
+              <p>+62 878 8590 6389</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex justify-around mb-6 md:w-1/3 space-x-10">
+          <div>
+            <h4 class="text-red-900 font-semibold">COMPANY</h4>
+            <ul class="space-y-1">
+              <li><a href="#" class="text-sm hover:text-red-600">Beranda</a></li>
+              <li><a href="#" class="text-sm hover:text-red-600">Tentang</a></li>
+              <li><a href="#" class="text-sm hover:text-red-600">Kontak</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-red-900 font-semibold">SUPPORT</h4>
+            <ul class="space-y-1">
+              <li><a href="#" class="text-sm hover:text-red-600">Hubungi Kami</a></li>
+              <li><a href="#" class="text-sm hover:text-red-600">Bantuan</a></li>
+              <li><a href="#" class="text-sm hover:text-red-600">Panduan</a></li>
+              <li><a href="#" class="text-sm hover:text-red-600">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="flex flex-col items-center md:w-1/3 space-y-4">
+          <h4 class="text-red-900 font-semibold">FOLLOW US</h4>
+          <div class="flex space-x-4">
+            <div class="border border-red-900 rounded-full p-3 flex items-center justify-center w-6 h-6 hover:bg-red-600">
+              <i class="fab fa-whatsapp text-red-900"></i>
+            </div>
+
+            <div class="border border-red-900 rounded-full p-3 flex items-center justify-center w-6 h-6 hover:bg-red-600">
+              <i class="fa-brands fa-facebook-f text-red-900"></i>
+            </div>
+
+            <div class="border border-red-900 rounded-full p-3 flex items-center justify-center w-6 h-6 hover:bg-red-600">
+              <i class="fa-brands fa-instagram text-red-900"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
