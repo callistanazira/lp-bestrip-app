@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navbar Glassmorphism Scroll</title>
+        <!-- Link ke Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            /* Menambahkan transisi untuk background blur dan shadow */
+            .navbar {
+                transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100">
+        <header>
+            <!-- Navbar dengan efek glassmorphism, transparan dan blur saat scroll -->
+            <nav id="navbar" class="navbar fixed top-0 left-0 w-full p-4 bg-transparent text-white backdrop-blur-md bg-opacity-30 transition-all">
+                <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+                    <div class="relative flex items-center justify-between h-12">
+                        <!-- Logo -->
+                        <div class="flex items-center gap-2">
+                            <img style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5)" class="h-20 w-20" src="../src/img/logo1.png" alt="Logo" />
+                        </div>
+
+                        <!-- Navbar Menu (Centered) -->
+                        <div class="hidden md:flex flex-1 items-center justify-center space-x-8">
+                            <a href="#home" class="text-white hover:bg-red-600 px-3 py-1 hover:text-slate-200 rounded-md text-md font-light">Beranda</a>
+                            <a href="#about" class="text-white hover:bg-red-600 px-3 py-1 hover:text-slate-200 rounded-md text-md font-light">Tentang</a>
+                            <a href="#paket" class="text-white hover:bg-red-600 px-3 py-1 hover:text-slate-200 rounded-md text-md font-light">Paket</a>
+                            <a href="#footer" class="text-white hover:bg-red-600 px-3 py-1 hover:text-slate-200 rounded-md text-md font-light">Kontak</a>
+                        </div>
+
+                        <!-- Button Daftar Sekarang-->
+                        <div class="hidden md:block">
+                            <a href="https://besttrip.celebesdigital.id/daftar" class="bg-red-600 hover:bg-red-800 px-6 py-2 rounded-full text-md text-white">Daftar sekarang</a>
+                        </div>
+                        <div class="md:hidden">
+                            <button id="hamburger-icon" class="text-black focus:outline-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- <section id="home" class="relative w-full lg:h-screen h-[500px] bg-cover bg-center" style="background-image: url('../src/img/hero.jpg')">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 flex flex-col justify-center items-center w-full h-full text-white text-center">
+                <h1 class="text-4xl mx-5 mt-8">Temukan Kedamaian dalam Ibadah <br />Umrah bersama Kami</h1>
+                <p class="mt-6 text-xl font-thin">Dilengkapi Fasilitas Nyaman dan Pendampingan Penuh, Wujudkan Perjalanan Ibadah Anda Bersama Kami</p>
+                <a href="https://besttrip.celebesdigital.id/daftar" class="mt-6 px-12 py-3 bg-red-700 hover:bg-red-800 text-white rounded-xl text-xl">Daftar Sekarang</a>
+            </div>
+        </section> -->
+
+        <section id="paket" class="container mx-auto max-w-screen-lg mt-14 mb-28">
+            <div class="text-center container mx-auto w-full">
+                <h2 class="text-4xl mb-6" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5)">PAKET YANG TERSEDIA</h2>
+
+                <div class="overflow-x-auto px-4 hide-scrollbar">
+                    <div class="flex space-x-4 whitespace-nowrap">
+                        <!-- Card 1 -->
+                        <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Umrah</h3>
+                                    <p class="text-sm mb-2">tgl / bln / tahun</p>
+                                    <div class="flex justify-center space-x-2 mb-2">
+                                        <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                                        <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                                    </div>
+                                </div>
+                                <img src="img/image.png" alt="Image description" class="w-36 h-24 ml-4" />
+                            </div>
+                            <hr />
+                            <p class="flex space-x-2 text-sm mt-3 mb-3">
+                                <span>Makassar</span>
+                                <img src="img/plane.png" alt="Plane icon" class="w-4 h-4" />
+                                <span>Jeddah</span>
+                            </p>
+                            <hr />
+                            <div class="flex gap-4 mt-3 mb-3">
+                                <div class="text-left">
+                                    <p class="font-semibold">Include :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Bus</li>
+                                        <li>Makan</li>
+                                        <li>Hotel</li>
+                                        <li>Koper</li>
+                                        <li>Visa</li>
+                                        <li>Tour Guide</li>
+                                    </ul>
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-semibold">Exclude :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Tiket domestik</li>
+                                        <li>Bagasi berlebih (overload)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="mt-3 mb-3 text-left">
+                                <p class="text-sm text-gray-600">MEKKAH</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                                <p class="text-sm text-gray-600">MEDINA</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="flex justify-between items-center mt-4">
+                                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                                <div class="text-right">
+                                    <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                                    <p class="text-xl font-bold">IDR 18.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card 2 -->
+                        <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Umrah</h3>
+                                    <p class="text-sm mb-2">tgl / bln / tahun</p>
+                                    <div class="flex justify-center space-x-2 mb-2">
+                                        <span class="rounded-full border border-sky-100 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                                        <span class="rounded-full border border-sky-100 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                                    </div>
+                                </div>
+                                <img src="img/image.png" alt="Image description" class="w-36 h-24 ml-4" />
+                            </div>
+                            <hr />
+                            <p class="flex space-x-2 text-sm mt-3 mb-3">
+                                <span>Makassar</span>
+                                <img src="img/plane.png" alt="Plane icon" class="w-4 h-4" />
+                                <span>Jeddah</span>
+                            </p>
+                            <hr />
+                            <div class="flex gap-4 mt-3 mb-3">
+                                <div class="text-left">
+                                    <p class="font-semibold">Include :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Bus</li>
+                                        <li>Makan</li>
+                                        <li>Hotel</li>
+                                        <li>Koper</li>
+                                        <li>Visa</li>
+                                        <li>Tour Guide</li>
+                                    </ul>
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-semibold">Exclude :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Tiket domestik</li>
+                                        <li>Bagasi berlebih (overload)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="mt-3 mb-3 text-left">
+                                <p class="text-sm text-gray-600">MEKKAH</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                                <p class="text-sm text-gray-600">MEDINA</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="flex justify-between items-center mt-4">
+                                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                                <div class="text-right">
+                                    <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                                    <p class="text-xl font-bold">IDR 18.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card 3 -->
+                        <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Umrah</h3>
+                                    <p class="text-sm mb-2">tgl / bln / tahun</p>
+                                    <div class="flex justify-center space-x-2 mb-2">
+                                        <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                                        <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                                    </div>
+                                </div>
+                                <img src="img/image.png" alt="Image description" class="w-36 h-24 ml-4" />
+                            </div>
+                            <hr />
+                            <p class="flex space-x-2 text-sm mt-3 mb-3">
+                                <span>Makassar</span>
+                                <img src="img/plane.png" alt="Plane icon" class="w-4 h-4" />
+                                <span>Jeddah</span>
+                            </p>
+                            <hr />
+                            <div class="flex gap-4 mt-3 mb-3">
+                                <div class="text-left">
+                                    <p class="font-semibold">Include :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Bus</li>
+                                        <li>Makan</li>
+                                        <li>Hotel</li>
+                                        <li>Koper</li>
+                                        <li>Visa</li>
+                                        <li>Tour Guide</li>
+                                    </ul>
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-semibold">Exclude :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Tiket domestik</li>
+                                        <li>Bagasi berlebih (overload)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="mt-3 mb-3 text-left">
+                                <p class="text-sm text-gray-600">MEKKAH</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                                <p class="text-sm text-gray-600">MEDINA</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="flex justify-between items-center mt-4">
+                                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                                <div class="text-right">
+                                    <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                                    <p class="text-xl font-bold">IDR 18.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card 4 -->
+                        <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Umrah</h3>
+                                    <p class="text-sm mb-2">tgl / bln / tahun</p>
+                                    <div class="flex justify-center space-x-2 mb-2">
+                                        <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                                        <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                                    </div>
+                                </div>
+                                <img src="img/image.png" alt="Image description" class="w-36 h-24 ml-4" />
+                            </div>
+                            <hr />
+                            <p class="flex space-x-2 text-sm mt-3 mb-3">
+                                <span>Makassar</span>
+                                <img src="img/plane.png" alt="Plane icon" class="w-4 h-4" />
+                                <span>Jeddah</span>
+                            </p>
+                            <hr />
+                            <div class="flex gap-4 mt-3 mb-3">
+                                <div class="text-left">
+                                    <p class="font-semibold">Include :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Bus</li>
+                                        <li>Makan</li>
+                                        <li>Hotel</li>
+                                        <li>Koper</li>
+                                        <li>Visa</li>
+                                        <li>Tour Guide</li>
+                                    </ul>
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-semibold">Exclude :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Tiket domestik</li>
+                                        <li>Bagasi berlebih (overload)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="mt-3 mb-3 text-left">
+                                <p class="text-sm text-gray-600">MEKKAH</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                                <p class="text-sm text-gray-600">MEDINA</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="flex justify-between items-center mt-4">
+                                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                                <div class="text-right">
+                                    <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                                    <p class="text-xl font-bold">IDR 18.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card 5 -->
+                        <div class="w-fit bg-white shadow-lg rounded-lg p-10 border inline-block">
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Umrah</h3>
+                                    <p class="text-sm mb-2">tgl / bln / tahun</p>
+                                    <div class="flex justify-center space-x-2 mb-2">
+                                        <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">10 hari</span>
+                                        <span class="rounded-full border border-sky-100 bg-sky-50 px-2 py-0.5 dark:text-sky-300 dark:border-sky-500/15 dark:bg-sky-500/10">direct</span>
+                                    </div>
+                                </div>
+                                <img src="img/image.png" alt="Image description" class="w-36 h-24 ml-4" />
+                            </div>
+                            <hr />
+                            <p class="flex space-x-2 text-sm mt-3 mb-3">
+                                <span>Makassar</span>
+                                <img src="img/plane.png" alt="Plane icon" class="w-4 h-4" />
+                                <span>Jeddah</span>
+                            </p>
+                            <hr />
+                            <div class="flex gap-4 mt-3 mb-3">
+                                <div class="text-left">
+                                    <p class="font-semibold">Include :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Bus</li>
+                                        <li>Makan</li>
+                                        <li>Hotel</li>
+                                        <li>Koper</li>
+                                        <li>Visa</li>
+                                        <li>Tour Guide</li>
+                                    </ul>
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-semibold">Exclude :</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Tiket domestik</li>
+                                        <li>Bagasi berlebih (overload)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="mt-3 mb-3 text-left">
+                                <p class="text-sm text-gray-600">MEKKAH</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                                <p class="text-sm text-gray-600">MEDINA</p>
+                                <div class="flex items-center space-x-1 mb-2">
+                                    <span class="text-sm">Hotel</span>
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                    <img src="img/star.png" alt="Star icon" class="w-4 h-4" />
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="flex justify-between items-center mt-4">
+                                <button class="bg-blue-600 text-white px-4 py-1 rounded-md text-sm hover:bg-blue-800">SEAT TERBATAS</button>
+                                <div class="text-right">
+                                    <p class="text-sm text-gray-500">Harga mulai: <span class="line-through text-red-700">20 Juta</span></p>
+                                    <p class="text-xl font-bold">IDR 18.000.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- foto -->
+        <section id="foto" class="container mx-auto max-w-screen-lg mt-14 mb-28">
+            <div class="text-center container mx-auto w-full">
+                <h2 class="text-4xl mb-6" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5)">JAMAAH KAMI</h2>
+
+                <div class="overflow-x-auto px-4 hide-scrollbar">
+                    <div class="flex space-x-4 whitespace-nowrap">
+                        <div class="flex space-x-4 whitespace-nowrap">
+                            <div class="rounded-lg border-8 border-sky-800 w-96">
+                                <div class="overflow-hidden">
+                                    <img src="img/jamaah.jpg" alt="" class="transition-all duration-300 rounded-lg hover:scale-110 hover:rounded-lg" />
+                                </div>
+                                <div class="px-5 py-6 border-t-8 border-sky-800">
+                                    <h3 class="mt-2 text-2xl font-serif">Jamaah Platinum Oktober 2024</h3>
+                                    <div class="flex justify-between">
+                                        <p class="text-zinc-400">bestTrip Travel</p>
+                                        <img src="img/logo1.png" alt="" class="h-16 w-16" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-lg border-8 border-sky-800 w-96">
+                                <div class="overflow-hidden">
+                                    <img src="img/jamaah.jpg" alt="" class="transition-all duration-300 rounded-lg hover:scale-110 hover:rounded-lg" />
+                                </div>
+                                <div class="px-5 py-6 border-t-8 border-sky-800">
+                                    <h3 class="mt-2 text-2xl font-serif">Jamaah Platinum Oktober 2024</h3>
+                                    <div class="flex justify-between">
+                                        <p class="text-zinc-400">bestTrip Travel</p>
+                                        <img src="img/logo1.png" alt="" class="h-16 w-16" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-lg border-8 border-sky-800 w-96">
+                                <div class="overflow-hidden">
+                                    <img src="img/jamaah.jpg" alt="" class="transition-all duration-300 rounded-lg hover:scale-110 hover:rounded-lg" />
+                                </div>
+                                <div class="px-5 py-6 border-t-8 border-sky-800">
+                                    <h3 class="mt-2 text-2xl font-serif">Jamaah Platinum Oktober 2024</h3>
+                                    <div class="flex justify-between">
+                                        <p class="text-zinc-400">bestTrip Travel</p>
+                                        <img src="img/logo1.png" alt="" class="h-16 w-16" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-lg border-8 border-sky-800 w-96">
+                                <div class="overflow-hidden">
+                                    <img src="img/jamaah.jpg" alt="" class="transition-all duration-300 rounded-lg hover:scale-110 hover:rounded-lg" />
+                                </div>
+                                <div class="px-5 py-6 border-t-8 border-sky-800">
+                                    <h3 class="mt-2 text-2xl font-serif">Jamaah Platinum Oktober 2024</h3>
+                                    <div class="flex justify-between">
+                                        <p class="text-zinc-400">bestTrip Travel</p>
+                                        <img src="img/logo1.png" alt="" class="h-16 w-16" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-lg border-8 border-sky-800 w-96">
+                                <div class="overflow-hidden">
+                                    <img src="img/jamaah.jpg" alt="" class="transition-all duration-300 rounded-lg hover:scale-110 hover:rounded-lg" />
+                                </div>
+                                <div class="px-5 py-6 border-t-8 border-sky-800">
+                                    <h3 class="mt-2 text-2xl font-serif">Jamaah Platinum Oktober 2024</h3>
+                                    <div class="flex justify-between">
+                                        <p class="text-zinc-400">bestTrip Travel</p>
+                                        <img src="img/logo1.png" alt="" class="h-16 w-16" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Event listener untuk scroll
+            window.addEventListener("scroll", function () {
+                const navbar = document.getElementById("navbar");
+
+                // Menambahkan atau menghapus kelas berdasarkan posisi scroll
+                if (window.scrollY > 50) {
+                    navbar.classList.add("bg-violer", "backdrop-blur-lg", "shadow-lg");
+                } else {
+                    navbar.classList.remove("bg-black", "backdrop-blur-lg", "shadow-lg");
+                }
+            });
+        </script>
+    </body>
+</html>

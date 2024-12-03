@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+#navbar {
+    background-color: rgba(150, 164, 190, 0.37); /* Default transparan */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(7px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transisi latar belakang dan bayangan */
+}
+
+#navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7); /* Warna latar belakang saat di-scroll */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); /* Lebih gelap saat scroll */
+}
+
+.transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease;
+}
+.blur-load {
+    background-size: cover;
+    background-position: center;
+}
+.blur-load.loaded > img {
+    opacity: 1;
+}
+.blur-load > img {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
